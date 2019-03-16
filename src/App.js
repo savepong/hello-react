@@ -7,6 +7,18 @@ class App extends Component {
         characters: []
     };
 
+    componentDidMount() {
+        const url = 'https://reqres.in/api/users'
+
+        fetch(url)
+            .then(result => result.json())
+            .then(result => {
+                this.setState({
+                    characters: result.data
+                })
+            })
+    }
+
     removeCharacter = index => {
         const { characters } = this.state
 

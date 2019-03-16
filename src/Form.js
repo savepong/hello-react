@@ -5,8 +5,8 @@ class Form extends Component {
         super(props)
 
         this.initialState = {
-            name: '',
-            job: '',
+            first_name: '',
+            last_name: '',
         }
 
         this.state = this.initialState
@@ -26,22 +26,22 @@ class Form extends Component {
     }
 
     render() {
-        const { name, job } = this.state;
+        const { first_name, last_name } = this.state;
 
         return (
             <form>
-                <label>Name</label>
+                <label>First name</label>
                 <input
                     type="text"
-                    name="name"
-                    value={name}
+                    name="first_name"
+                    value={first_name}
                     onChange={this.handleChange} />
 
-                <label>Job</label>
+                <label>Last name</label>
                 <input
                     type="text"
-                    name="job"
-                    value={job}
+                    name="last_name"
+                    value={last_name}
                     onChange={this.handleChange} />
                 <input
                     type="button"
